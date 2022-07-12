@@ -3,7 +3,11 @@ import Element from "./Element";
 function Pokedex({ pokedex }) {
     return (
 
-        pokedex !== [] ?
+        pokedex === [] ?
+            <div className="section">
+                <h3 className="display-3"> Your Pokedex </h3>
+                <p>Your pokedex is empty now.</p>
+            </div> :
             <div className="section row">
                 <h3 className="display-3"> Your Pokedex </h3>
                 {pokedex.map((pokemonSelected) =>
@@ -13,10 +17,7 @@ function Pokedex({ pokedex }) {
                         <Element element={pokemonSelected}></Element>
                     </div>))}
             </div>
-            : <div className="section">
-                <h3 className="display-3"> Your Pokedex </h3>
-                <p>Your pokedex is empty now.</p>
-            </div>
+
     )
 }
 

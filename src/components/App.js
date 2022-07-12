@@ -13,17 +13,17 @@ const queryClient = new QueryClient()
 function App() {
 
   const [pokemonsSelected, setPokemonsSelected] = usePokemonState();
-  
+
   return (
     <div>
-        <QueryClientProvider client={queryClient}>
-          <Header />
-          <Title />
-          <Search />
-          <Pokemons />
-          <Pokedex pokedex={pokemonsSelected}/>
-          <Types />
-        </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <Header />
+        <Title />
+        <Pokedex pokedex={pokemonsSelected} />
+        <Search />
+        <Types />
+        <Pokemons />
+      </QueryClientProvider>
     </div>
   );
 }

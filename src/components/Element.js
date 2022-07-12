@@ -12,7 +12,7 @@ function Element({element}) {
                 className="mb-2"
             >
                 <Card.Body>
-                    <Card.Title>{element.name} </Card.Title>
+                    <Card.Title>{element?.name} </Card.Title>
                     <Card.Text>
                     </Card.Text>
                 </Card.Body>
